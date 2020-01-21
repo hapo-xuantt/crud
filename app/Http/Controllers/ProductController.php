@@ -37,9 +37,9 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $product = new Product([
-         'name' => $request->get('name'),
-         'price' => $request->get('price'),
-         'vendor' => $request->get('vendor')
+            'name' => $request->('name'),
+            'price' => $request->('price'),
+            'vendor' => $request->('vendor')
         ]);
         $product->save();
         return redirect('index');

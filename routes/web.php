@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('index', 'ProductController@index')->name('index');
+Route::get('create', 'ProductController@create')->name('product.create');
+Route::post('store', 'ProductController@store')->name('product.store');
+Route::get('show/{id}', 'ProductController@show')->name('product.show');
+Route::get('edit/{id}', 'ProductController@edit')->name('product.edit');
+Route::put('update/{id}', 'ProductController@update')->name('product.update');
+Route::delete('delete/{id}', 'ProductController@destroy')->name('product.delete');
